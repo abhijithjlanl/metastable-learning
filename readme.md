@@ -23,14 +23,7 @@ using Pkg
 Pkg.instantiate()
 ```
 
-If you are already in a Julia session from the repository root, activate the
-environment directly:
 
-```julia
-using Pkg
-Pkg.activate(".")
-Pkg.instantiate()
-```
 
 For one-off scripts, pass the environment on the command line:
 
@@ -75,27 +68,6 @@ julia --project=../.. free_energy_plotter.jl
 This writes `FE_histogram.pdf`. If the cached sample file named in the script is
 not present, the script will generate new Glauber samples, which can be slow.
 
-Run the sampler test script:
-
-```bash
-julia --project=../.. cw_sampler_test.jl
-```
-
-This script also uses a large default sample count. Reduce `M_list` in the file
-for a quick smoke test.
-
-The MLE and pseudolikelihood contour plots are in
-`Experiments/CW_tests/MLE_test`. `test_MLE.jl` is not standalone as committed:
-it expects `samples_MCMC` to be available. To reproduce these plots, uncomment
-the sampling line that defines `samples_MCMC`, or load samples before evaluating
-the plotting section. Then run:
-
-```bash
-cd Experiments/CW_tests/MLE_test
-julia --project=../../.. test_MLE.jl
-```
-
-It writes `PLE_loss.pdf`, `MLE_loss.pdf`, and `PLE_losszoom.pdf`.
 
 ## Spin-glass learning experiments
 
@@ -131,6 +103,7 @@ Potts pseudolikelihood learner is in
 
 ## License
 
-
-
 This code is provided under a BSD license as part of the Optimization, Inference and Learning for Advanced Networks project, C18014.
+
+
+
