@@ -1,6 +1,6 @@
 using Pkg
+Pkg.activate(joinpath(@__DIR__, "..", ".."))
 using LaTeXStrings
-Pkg.activate("../../LS_env")
 include("../../utils.jl")
 include("cw_utils.jl")
 using Polynomials
@@ -125,7 +125,6 @@ if isfile(filename)
     end
 end
 =#
-
 
 
 

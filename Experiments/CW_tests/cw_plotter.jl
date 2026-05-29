@@ -1,6 +1,6 @@
 using Pkg
+Pkg.activate(joinpath(@__DIR__, "..", ".."))
 using LaTeXStrings
-Pkg.activate("../../LS_env")
 include("../../utils.jl")
 include("cw_utils.jl")
 using Polynomials
@@ -97,7 +97,6 @@ ylabel!(L"\langle \sum_i \sigma_i \rangle_M")
 savefig("mag_cw.pdf")
 
 P4 = plot()
-
 
 
 

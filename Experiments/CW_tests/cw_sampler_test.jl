@@ -1,6 +1,6 @@
 
 using Pkg
-Pkg.activate("../../LS_env")
+Pkg.activate(joinpath(@__DIR__, "..", ".."))
 using LaTeXStrings
 using StatsBase
 using Random

@@ -1,5 +1,5 @@
 using Pkg
-Pkg.activate("../../LS_env")
+Pkg.activate(joinpath(@__DIR__, "..", ".."))
 include("CW_1D_utils.jl")
 using Plots
 using ArnoldiMethod

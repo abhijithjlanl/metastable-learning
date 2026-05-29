@@ -1,7 +1,7 @@
 using Pkg
+Pkg.activate(joinpath(@__DIR__, "..", ".."))
 using IterTools
 using LaTeXStrings
-Pkg.activate("../../LS_env")
 using GraphicalModelLearning
 using ProgressMeter
 using JLD2
@@ -26,8 +26,8 @@ end
 nspins_list = [5000]
 sampler_list = [:Glauber]
 Jns_list = [1.2]
-h_list = [0.02]
-M_list = [2^x for x in [22:2:32]]
+h_list = [0.04]
+M_list = [2^x for x in 22:2:32]
 
 arguments = product(nspins_list, Jns_list, h_list, sampler_list, M_list) |> collect
 
@@ -65,9 +65,6 @@ for arg in arguments, _ in 1:repeats
         file["df"] = df
     end
 end
-
-
-
 
 
 
